@@ -1,26 +1,2 @@
-----------
-dotnet watch run
-git pull
-
-git add .
-git commit -m "Message"
-git push origin namabranch
-
-git status
-git branch
-
-----------
-git branch namabranch
-----------
-
-----------
-git checkout hashcode
-----------
-
-----------KETERANGAN----------
-git pull = mengambil perubahan dari server ke lokal
-git add . = menandai perubahan di lokal
-git commit -m "Message" = menyimpan di lokal
-git push origin namabranch = meyimpan perubahan dari lokal ke server
-git status = cek status file, branch dan perubahan di lokal
-git branch = untuk mengetahui semua branch
+----- UNTUK MENJALANKAN PROGRAM-----
+Ketik dotnet watch run di terminal
