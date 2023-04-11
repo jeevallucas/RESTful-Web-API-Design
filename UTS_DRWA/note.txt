@@ -1,0 +1,9 @@
+----- UNTUK MENJALANKAN PROGRAM-----
+Ketik dotnet watch run di terminal
+
+--- COMMIT ---
+git status
+git add .
+git status
+git commit -m "Message"
+git push -u origin main
