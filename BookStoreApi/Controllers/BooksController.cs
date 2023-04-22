@@ -1,6 +1,8 @@
 using BookStoreApi.Models;
 using BookStoreApi.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
+using System.Net.Http;
 
 namespace BookStoreApi.Controllers;
 
@@ -33,9 +35,23 @@ public class BooksController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Post(Book newBook)
     {
-        await _booksService.CreateAsync(newBook);
+        try
+        {
+            if (newBook == null)
+            {
+                return BadRequest();
+            }
 
-        return CreatedAtAction(nameof(Get), new { id = newBook.Id }, newBook);
+            await _booksService.CreateAsync(newBook);
+
+            return CreatedAtAction(nameof(Get), new { id = newBook.Id }, newBook);
+        }
+
+        catch (Exception)
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError,
+            "Error retrieving data from the database");
+        }
     }
 
     [HttpPut("{id:length(24)}")]
