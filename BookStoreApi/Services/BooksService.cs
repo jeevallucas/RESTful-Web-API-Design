@@ -35,4 +35,9 @@ public class BooksService
 
     public async Task RemoveAsync(string id) =>
         await _booksCollection.DeleteOneAsync(x => x.Id == id);
+
+    internal Task FindAsync(string id)
+    {
+        throw new NotImplementedException();
+    }
 }

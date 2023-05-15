@@ -48,3 +48,5 @@ C:\Users\jnana\TodoApi\BookStoreApi\bin\Debug\net7.0\System.Net.Http.Formatting.
 C:\Users\jnana\TodoApi\BookStoreApi\bin\Debug\net7.0\System.Web.Http.dll
 C:\Users\jnana\TodoApi\BookStoreApi\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\jnana\TodoApi\BookStoreApi\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+C:\Users\jnana\TodoApi\BookStoreApi\bin\Debug\net7.0\BookStoreApi.xml
+C:\Users\jnana\TodoApi\BookStoreApi\obj\Debug\net7.0\BookStoreApi.xml

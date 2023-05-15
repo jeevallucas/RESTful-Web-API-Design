@@ -12,6 +12,7 @@ public class Book
     public string? Id { get; set; }
 
     [BsonElement("Name")]
+    [Required]
     public string BookName { get; set; } = null!;
     
     [Required]

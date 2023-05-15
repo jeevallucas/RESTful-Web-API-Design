@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BookStoreApi</name>
+    </assembly>
+    <members>
+        <member name="M:BookStoreApi.Controllers.BooksController.Get">
+             <summary>
+             Shows all BookStoreItem
+             </summary>
+             <returns>Shown every BookStoreItem</returns>
+             <remarks>
+             Sample request:
+            
+                 GET /BookStore
+                 {
+                    "Id": "string",
+                    "BookName": "Book Item #1",
+                    "Price": 0,
+                    "Category": "Category #1",
+                    "Author": "Author #1"
+                 }
+            
+             </remarks>
+             <response code="201">Returns the newly created item</response>
+             <response code="400">If the item is null or invalid</response>
+             <response code="401">If the user is not authorized to perform the operation</response>
+             <response code="404">If the requested item is not found</response>
+             <response code="500">If there is a server error</response>
+        </member>
+        <member name="M:BookStoreApi.Controllers.BooksController.Get(System.String)">
+             <summary>
+             Shows a spesific BookStoreItem
+             </summary>
+             <param name="id"></param>
+             <returns>Shown one BookStoreItem</returns>
+             <remarks>
+             Sample request:
+            
+                 GET /BookStore
+                 {
+                    "Id": "string"
+                 }
+            
+             </remarks>
+             <response code="201">Returns the newly created item</response>
+             <response code="400">If the item is null or invalid</response>
+             <response code="401">If the user is not authorized to perform the operation</response>
+             <response code="404">If the requested item is not found</response>
+             <response code="500">If there is a server error</response>
+        </member>
+        <member name="M:BookStoreApi.Controllers.BooksController.Post(BookStoreApi.Models.Book)">
+             <summary>
+             Creates a BookStoreItem
+             </summary>
+             <param name="newBook"></param>
+             <returns>A newly created BookStoreItem</returns>
+             <remarks>
+             Sample request:
+            
+                 POST /BookStore
+                 {
+                    "Id": "string",
+                    "BookName": "Book Item #1",
+                    "Price": 0,
+                    "Category": "Category #1",
+                    "Author": "Author #1"
+                 }
+            
+             </remarks>
+             <response code="201">Returns the newly created item</response>
+             <response code="400">If the item is null or invalid</response>
+             <response code="401">If the user is not authorized to perform the operation</response>
+             <response code="404">If the requested item is not found</response>
+             <response code="500">If there is a server error</response>
+        </member>
+        <member name="M:BookStoreApi.Controllers.BooksController.Update(System.String,BookStoreApi.Models.Book)">
+             <summary>
+             Updates a spesific BookStoreItem
+             </summary>
+             <param name="id"></param>
+             <param name="updatedBook"></param>
+             <returns>One updated BookStoreItem</returns>
+             <remarks>
+             Sample request:
+            
+                 PUT /BookStore
+                 {
+                    "Id": "string",
+                    "BookName": "Book Item #1",
+                    "Price": 0,
+                    "Category": "Category #1",
+                    "Author": "Author #1"
+                 }
+            
+             </remarks>
+             <response code="201">Returns the newly created item</response>
+             <response code="400">If the item is null or invalid</response>
+             <response code="401">If the user is not authorized to perform the operation</response>
+             <response code="404">If the requested item is not found</response>
+             <response code="500">If there is a server error</response>
+        </member>
+        <member name="M:BookStoreApi.Controllers.BooksController.Delete(System.String)">
+             <summary>
+             Deletes a specific BookStoreItem
+             </summary>
+             <param name="id"></param>
+             <returns>One deleted BookStorItem</returns>
+             <remarks>
+             Sample request:
+            
+                 DELETE /BookStore
+                 {
+                    "Id": "string"
+                 }
+            
+             </remarks>
+             <response code="201">Returns the newly created item</response>
+             <response code="400">If the item is null or invalid</response>
+             <response code="401">If the user is not authorized to perform the operation</response>
+             <response code="404">If the requested item is not found</response>
+             <response code="500">If there is a server error</response>
+        </member>
+    </members>
+</doc>
