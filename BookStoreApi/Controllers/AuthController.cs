@@ -17,6 +17,10 @@ namespace BookStoreApi.Controllers
             this.configuration = configuration;
         }
 
+        /// <summary>
+        /// BookStoreItem authentication method
+        /// </summary>
+        /// <returns>Gave an authentication token</returns>
         [AllowAnonymous]
         [HttpPost]
         public IActionResult Auth([FromBody] User user)

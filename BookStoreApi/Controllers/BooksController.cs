@@ -69,6 +69,7 @@ public class BooksController : ControllerBase
     /// <response code="404">If the requested item is not found</response>
     /// <response code="500">If there is a server error</response>
     [HttpGet("{id:length(24)}")]
+    [Authorize]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -110,6 +111,7 @@ public class BooksController : ControllerBase
     /// <response code="404">If the requested item is not found</response>
     /// <response code="500">If there is a server error</response>
     [HttpPost]
+    [Authorize]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -161,6 +163,7 @@ public class BooksController : ControllerBase
     /// <response code="404">If the requested item is not found</response>
     /// <response code="500">If there is a server error</response>
     [HttpPut("{id:length(24)}")]
+    [Authorize]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -202,6 +205,7 @@ public class BooksController : ControllerBase
     /// <response code="404">If the requested item is not found</response>
     /// <response code="500">If there is a server error</response>
     [HttpDelete("{id:length(24)}")]
+    [Authorize]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]

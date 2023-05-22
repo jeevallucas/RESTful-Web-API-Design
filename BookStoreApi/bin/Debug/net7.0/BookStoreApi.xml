@@ -4,6 +4,12 @@
         <name>BookStoreApi</name>
     </assembly>
     <members>
+        <member name="M:BookStoreApi.Controllers.AuthController.Auth(BookStoreApi.User)">
+            <summary>
+            BookStoreItem authentication method
+            </summary>
+            <returns>Gave an authentication token</returns>
+        </member>
         <member name="M:BookStoreApi.Controllers.BooksController.Get">
              <summary>
              Shows all BookStoreItem
