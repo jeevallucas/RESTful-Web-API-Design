@@ -50,3 +50,10 @@ C:\Users\jnana\TodoApi\BookStoreApi\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\jnana\TodoApi\BookStoreApi\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
 C:\Users\jnana\TodoApi\BookStoreApi\bin\Debug\net7.0\BookStoreApi.xml
 C:\Users\jnana\TodoApi\BookStoreApi\obj\Debug\net7.0\BookStoreApi.xml
+C:\Users\jnana\TodoApi\BookStoreApi\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\jnana\TodoApi\BookStoreApi\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\jnana\TodoApi\BookStoreApi\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\jnana\TodoApi\BookStoreApi\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\jnana\TodoApi\BookStoreApi\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\jnana\TodoApi\BookStoreApi\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\jnana\TodoApi\BookStoreApi\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
