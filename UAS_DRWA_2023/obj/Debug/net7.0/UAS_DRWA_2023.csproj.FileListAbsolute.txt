@@ -1,7 +1,0 @@
-C:\Users\jnana\TodoApi\UAS_DRWA_2023\obj\Debug\net7.0\UAS_DRWA_2023.csproj.AssemblyReference.cache
-C:\Users\jnana\TodoApi\UAS_DRWA_2023\obj\Debug\net7.0\UAS_DRWA_2023.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\jnana\TodoApi\UAS_DRWA_2023\obj\Debug\net7.0\UAS_DRWA_2023.AssemblyInfoInputs.cache
-C:\Users\jnana\TodoApi\UAS_DRWA_2023\obj\Debug\net7.0\UAS_DRWA_2023.AssemblyInfo.cs
-C:\Users\jnana\TodoApi\UAS_DRWA_2023\obj\Debug\net7.0\UAS_DRWA_2023.csproj.CoreCompileInputs.cache
-C:\Users\jnana\TodoApi\UAS_DRWA_2023\obj\Debug\net7.0\UAS_DRWA_2023.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\jnana\TodoApi\UAS_DRWA_2023\obj\Debug\net7.0\UAS_DRWA_2023.MvcApplicationPartsAssemblyInfo.cache
