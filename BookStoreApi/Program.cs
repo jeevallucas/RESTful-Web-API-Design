@@ -1,18 +1,28 @@
-using System.Reflection;
+using System.Text;
 using BookStoreApi.Models;
 using BookStoreApi.Services;
-using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using System.Text;
-
+using Microsoft.OpenApi.Models;
 var builder = WebApplication.CreateBuilder(args);
-
 // Add services to the container.
-builder.Services.Configure<BookStoreDatabaseSettings>(
-    builder.Configuration.GetSection("BookStoreDatabase"));
 
-builder.Services.AddSingleton<BooksService>();
+builder.Services.Configure<GuruDatabaseSettings>(
+    builder.Configuration.GetSection("GuruDatabase"));
+
+builder.Services.Configure<KelassDatabaseSettings>(
+builder.Configuration.GetSection("KelassDatabase"));
+
+builder.Services.Configure<MapelDatabaseSettings>(
+builder.Configuration.GetSection("MapelDatabase"));
+
+builder.Services.Configure<PresensiHarianGuruuDatabaseSettings>(
+builder.Configuration.GetSection("PresensiHarianGuruuDatabase"));
+
+builder.Services.AddSingleton<GuruService>();
+builder.Services.AddSingleton<KelassService>();
+builder.Services.AddSingleton<MapelService>();
+builder.Services.AddSingleton<PresensiHarianGuruuService>();
 
 builder.Services.AddControllers()
     .AddJsonOptions(
@@ -34,59 +44,42 @@ builder.Services.AddAuthentication(options =>
         ValidateLifetime = false,
         ValidateIssuerSigningKey = true
     };
-});
-builder.Services.AddAuthorization();
-// Add configuration from appsettings.json
+}); builder.Services.AddAuthorization();// Add configuration from appsettings.json
 builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
     .AddEnvironmentVariables();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo
     {
         Version = "v1",
-        Title = "BookStore [API]",
-        Description = "An ASP.NET Core Web API for managing BookStore items. Provides a collection of BookStore items and provides a collection of methods.",
+        Title = "Sekolah API",
+        Description = "An ASP.NET Core Web API for managing school items",
         TermsOfService = new Uri("https://example.com/terms"),
         Contact = new OpenApiContact
         {
-            Name = "Jeevallucas Gautama | Contact",
+            Name = "Jeevallucas Gautama",
             Url = new Uri("https://www.linkedin.com/in/jeevallucas")
         },
         License = new OpenApiLicense
         {
-            Name = "Jeevallucas Gautama | License",
+            Name = "Jeevallucas Gautama License",
             Url = new Uri("https://example.com/license")
         }
     });
 
-    // using System.Reflection;
-    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-    options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
-
 var app = builder.Build();
-
 // Configure the HTTP request pipeline.
-app.UseAuthentication();
-
-app.UseAuthorization();
-
-IConfiguration configuration = app.Configuration;
-
-IWebHostEnvironment environment = app.Environment;
-
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
+app.UseAuthorization();
+IConfiguration configuration = app.Configuration;
+IWebHostEnvironment environment = app.Environment;
 app.MapControllers();
-
 app.Run();

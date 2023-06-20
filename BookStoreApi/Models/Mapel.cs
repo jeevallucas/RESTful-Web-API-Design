@@ -5,20 +5,21 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BookStoreApi.Models;
 
-public class Book
+public class Mapel
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
     public string? Id { get; set; }
 
     [BsonElement("Name")]
-    [Required]
-    public string BookName { get; set; } = null!;
-    
-    [Required]
-    public decimal? Price { get; set; } = null!;
+    [JsonPropertyName("Name")]
 
-    public string Category { get; set; } = null!;
-    
-    public string Author { get; set; } = null!;
+    [Required]
+    public string Nama { get; set; } = null!;
+
+    [Required]
+    public string Kelas { get; set; } = null!;
+
+
+
 }

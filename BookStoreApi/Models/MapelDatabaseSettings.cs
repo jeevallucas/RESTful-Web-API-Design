@@ -1,6 +1,6 @@
 namespace BookStoreApi.Models;
 
-public class BookStoreDatabaseSettings
+public class MapelDatabaseSettings
 {
     public string ConnectionString { get; set; } = null!;
 
